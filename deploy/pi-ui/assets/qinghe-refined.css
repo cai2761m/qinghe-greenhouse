@@ -1,0 +1,554 @@
+/* 青禾 · 生长有序。Local assets, no external font or image dependency. */
+:root {
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  color: #243c32;
+  background: #f3f5f0;
+  --green: #22664d;
+  --dark: #173e30;
+  --muted: #79877e;
+  --line: #e3e9e1;
+  --lime: #dcedc3;
+  --paper: #fff;
+}
+body { background: #f3f5f0; line-height: 1.5; }
+button, input, select { font-family: inherit; }
+.number { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; font-variant-numeric: tabular-nums; }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 3px solid #80b28e; outline-offset: 3px;
+}
+button:active { transform: translateY(1px); }
+::selection { background: #cfe5c6; color: #173e30; }
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-thumb { background: #c7d3c7; border-radius: 8px; }
+::-webkit-scrollbar-track { background: #f3f5f0; }
+
+/* A quiet, evergreen workspace. */
+.sidebar {
+  width: 216px; padding: 30px 18px 0; background: #173e30;
+  color: #e8f0df; border-right: 0; box-shadow: 5px 0 28px #173e3007;
+}
+.brand { padding: 0 8px 34px; gap: 12px; color: #f7faef; }
+.brand-mark { background: #d8e9b9; color: #284b32; border-radius: 12px 12px 12px 3px; width: 42px; height: 45px; }
+.brand strong { font-size: 27px; font-weight: 650; letter-spacing: 3px; }
+.brand-dot { color: #bed58c; }
+.brand small { color: #b6c8b3; font-size: 7px; letter-spacing: 1.2px; margin-top: 6px; }
+.workspace-label, .nav-label { color: #91ac9b; font-size: 10px; letter-spacing: 1px; }
+.workspace-label { padding: 0 10px; }
+.workspace-label > span { color: #b4caa9; border-color: #6a846c; background: transparent; }
+.farm-select { background: #ffffff08; border: 1px solid #ffffff14; border-radius: 10px; padding: 14px 10px; margin-top: 12px; }
+.farm-select strong { color: #e7f0dd; font-weight: 500; }
+.farm-select small { color: #98afa0; }
+.farm-select > svg { color: #99af9b; }
+.farm-symbol { color: #c3d5a7; background: #ffffff09; border-color: #ffffff0d; }
+.nav-label { padding: 30px 12px 14px; }
+.nav-list { gap: 9px; }
+.nav-list > button { min-height: 47px; padding: 0 14px; border-radius: 9px; color: #b5c9b9; font-size: 13px; }
+.nav-list > button > svg { color: #9bb7a5; }
+.nav-list > button:hover { background: #ffffff0d; color: #f7faef; }
+.nav-list > button.active { background: #dcedc3; color: #244a34; font-weight: 600; box-shadow: 0 3px 12px #071b1414; }
+.nav-list > button.active > svg { color: #356b48; }
+.nav-list > button.active:before { display: none; }
+.active-dot { background: #477c4c; }
+.nav-count { color: #a5c4aa; background: #ffffff0a; border: 1px solid #ffffff10; }
+.nature-card { background: linear-gradient(135deg, #31583c, #254934); border: 1px solid #b4cd8b20; border-radius: 12px; padding: 20px 16px; margin-bottom: 22px; }
+.nature-card:after { border-color: #adc88225; }
+.nature-icon { color: #c0d592; }
+.nature-card strong { color: #e3eed4; font-weight: 500; font-size: 12px; }
+.nature-card p { color: #adc2a8; line-height: 1.9; }
+.nature-card > span { color: #adc48d; font-size: 8px; letter-spacing: 1.3px; }
+.bottom-nav { color: #aec2b1; font-size: 12px; min-height: 40px; }
+.bottom-nav:hover { background: #ffffff0c; color: #f0f5e8; }
+.user-profile { border-color: #ffffff12; padding-top: 20px; }
+.user-profile strong { color: #e8eedf; font-size: 12px; }
+.user-profile small { color: #93ac98; }
+.avatar { background: #dbe8c5; color: #426140; }
+.user-online { background: #b3cf86; box-shadow: 0 0 0 4px #b3cf8610; }
+.main-shell { margin-left: 216px; width: calc(100% - 216px); }
+.topbar { height: 64px; padding: 0 34px; background: #fbfcf9; border-bottom-color: #e4e9df; }
+.breadcrumb { color: #8a978c; font-size: 11px; }
+.breadcrumb > strong { color: #46614e; font-size: 12px; }
+.top-date { color: #677b68; font-family: inherit; font-size: 12px; }
+.top-avatar { background: #e6eedb; color: #617942; width: 31px; height: 31px; }
+.icon-button { width: 34px; height: 34px; border-radius: 8px; }
+.icon-button:hover { background: #e8efdf; }
+main { max-width: 1560px; padding: 28px 34px 0; }
+.page-heading { margin-bottom: 24px; align-items: center; }
+.eyebrow { color: #829373; font-size: 9px; letter-spacing: 2px; margin-bottom: 6px; }
+h1 { font-size: 29px; font-weight: 650; letter-spacing: 1px; }
+.page-heading p { color: #78877a; font-size: 12px; margin-top: 7px; }
+.heading-actions { align-self: center; gap: 18px; }
+.live-indicator { font-size: 11px; color: #5d7d54; }
+.button { border-radius: 8px; min-height: 37px; padding: 9px 14px; font-size: 11px; box-shadow: 0 2px 3px #173e3003; }
+.button-white { border-color: #dce4d7; background: #fff; }
+.button-green { background: #22664d; }
+
+/* The hero is drawn in CSS so it stays complete on the Pi without internet. */
+.hero-card {
+  height: 174px; border-radius: 15px; margin-bottom: 24px; isolation: isolate;
+  background: linear-gradient(108deg, #214e39 0%, #315e3f 57%, #476d44 100%);
+  border: 1px solid #365d3c; box-shadow: 0 8px 24px #214e390b;
+}
+.hero-photo {
+  inset: 0; opacity: 1; background-image:
+    radial-gradient(ellipse at 76% 110%, #c2d39325 0%, transparent 45%),
+    repeating-linear-gradient(113deg, transparent 0 83px, #d2e0b40b 84px 85px);
+}
+.hero-shade { background: linear-gradient(90deg, #173e303d, transparent); }
+.hero-card:before, .hero-card:after { content: ""; position: absolute; pointer-events: none; z-index: 1; }
+.hero-card:before {
+  width: 235px; height: 235px; border: 1px solid #c7d9a840; border-radius: 80% 0 80% 0;
+  transform: rotate(-26deg); right: 160px; top: -63px; box-shadow: inset 20px 10px 45px #d3e3ad0c;
+}
+.hero-card:after {
+  width: 170px; height: 170px; border: 1px solid #c7d9a830; border-radius: 0 80% 0 80%;
+  right: 89px; bottom: -98px; transform: rotate(-20deg);
+}
+.hero-copy { position: absolute; padding: 0; left: 28px; top: 23px; z-index: 2; }
+.hero-badge { color: #d7e4b8; font-size: 9px; letter-spacing: 2px; margin-bottom: 0; }
+.hero-badge > span { background: #c5da9c; }
+.hero-copy h2 { font-size: 25px; line-height: 1.5; font-weight: 500; letter-spacing: 2px; margin-top: 12px; }
+.hero-copy h2 br { display: none; }
+.hero-copy p { font-size: 10px; color: #c2d4ba; margin-top: 12px; letter-spacing: 1px; }
+.hero-weather { display: none; }
+.hero-location { right: 25px; bottom: 25px; color: #d1ddc0; font-size: 9px; z-index: 2; }
+.hero-pills { left: auto; right: 27px; bottom: auto; top: 26px; z-index: 2; }
+.hero-pills > span { font-size: 9px; padding: 6px 9px; color: #e0e9d0; background: #ffffff09; border-color: #dde8ca25; border-radius: 6px; }
+.section-toolbar { margin: 0 0 16px; min-height: 37px; }
+.house-picker { gap: 10px; }
+.house-picker > svg { color: #5c7850; }
+.house-picker select { font-size: 14px; font-weight: 600; color: #324d3c; padding-right: 8px; }
+.badge { border-radius: 5px; color: #4c7752; background: #eaf2e2; font-size: 10px; padding: 4px 7px; }
+.badge.warning { color: #9a6e35; background: #faf1dc; }
+.tiny-dot, .range-dot { background: #86a565; }
+.update-label { font-size: 10px; color: #82907f; }
+.farm-stats { border-radius: 11px; border-color: #e1e7db; padding: 17px 0; margin-bottom: 19px; box-shadow: 0 3px 8px #233e2a02; }
+.farm-stats > div { padding: 0 21px; gap: 12px; }
+.stat-icon { border: 0; background: #f0f4e8; color: #819260; border-radius: 10px; width: 37px; height: 39px; }
+.farm-stats small { color: #87917c; font-size: 10px; }
+.farm-stats strong { font-size: 13px; color: #354c36; }
+.farm-stats strong.number { font-size: 21px; font-weight: 600; }
+.growth-note { display: none; }
+.overview-grid { grid-template-columns: 1.2fr 1fr 1fr; gap: 17px; margin-bottom: 19px; }
+.card { border: 1px solid #e1e7dc; border-radius: 12px; background: #fff; box-shadow: 0 3px 10px #263b2303; }
+.card-heading { padding: 19px 20px 0; }
+.card-heading h2 { font-size: 14px; font-weight: 600; color: #304c39; letter-spacing: .3px; }
+.title-square { height: 12px; background: #7f9a57; border-radius: 2px; }
+.env-main-metrics { padding: 25px 21px 16px; gap: 24px; }
+.metric-name { color: #74866d; font-size: 11px; }
+.metric-value { color: #2c513d; font-size: 39px; font-weight: 550; margin-top: 14px; }
+.metric-value > span { color: #899a79; font-size: 17px; margin-left: 4px; }
+.metric-range { color: #7f9470; font-size: 10px; }
+.metric-range > small { color: #94a18c; font-size: 9px; }
+.sparkline { height: 30px; margin-top: 18px; }
+.env-secondary { margin: 0 21px; border-color: #edf0e7; padding: 16px 0; }
+.env-secondary > div > span { font-size: 10px; color: #7d8e72; }
+.env-secondary strong { font-size: 21px; }
+.card-foot { padding: 13px 20px; background: #fcfdf9; border-top: 1px solid #edf0e7; font-size: 10px; color: #819076; }
+.card-foot > button { color: #58784b; font-size: 10px; }
+.device-caption { font-size: 10px; color: #83917c; margin: 13px 20px 0; }
+.device-caption > span { color: #97a28c; font-size: 9px; }
+.device-visual { margin: 18px 19px 0; height: 118px; background: radial-gradient(ellipse at center, #e8efdf, #f5f8ee); border: 1px solid #e6ecdd; border-radius: 8px; }
+.device-visual-label { font-size: 7px; color: #95a082; letter-spacing: 1.5px; }
+.device-floating-badge { background: #ffffffc9; color: #718761; border: 1px solid #e6ecdf; border-radius: 4px; }
+.pi-stat-row { padding: 20px 20px 0; }
+.pi-stat-row small { font-size: 9px; color: #86927c; }
+.pi-stat-row strong { font-size: 23px; color: #3b573d; }
+.resource-bar { margin: 12px 20px 15px; height: 3px; background: #edf2e6; }
+.resource-bar > i { background: #94ae70; }
+.device-card-foot { margin: 0 20px; padding: 12px 0; font-size: 9px; border-color: #edf0e7; color: #829174; }
+.plc-stats { margin: 23px 20px 23px; }
+.plc-stats small { color: #86927c; font-size: 9px; }
+.plc-stats strong { color: #3b573d; font-size: 25px; }
+.plc-protocol { font-size: 10px; color: #5f7c50; }
+.plc-protocol > small { font-size: 9px; }
+
+/* Live monitoring belongs to the same design system as the rest of the farm. */
+#gh-panel { grid-column: 1 / -1; }
+#gh-panel .gh-panel-heading { padding: 18px 23px; border-bottom: 1px solid #edf0e7; }
+.gh-panel-title { display: flex; align-items: center; gap: 14px; }
+.gh-panel-title h2 { font-size: 15px; gap: 9px; }
+.gh-panel-subtitle { color: #97a28a; font-size: 9px; letter-spacing: 1.7px; padding-top: 2px; }
+.gh-heading-icon { display: inline-flex; color: #708e57; }
+.gh-heading-icon svg { width: 19px; height: 19px; }
+.gh-connection { font-size: 10px; gap: 5px; padding: 5px 9px; background: #eef5e8; }
+.gh-connection.gh-disconnected { background: #faf0de; color: #a0793a; }
+.gh-disconnected .tiny-dot { background: #c69b50; }
+.gh-flex { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.3fr); gap: 25px; padding: 20px 23px; }
+.gh-cam-wrap { min-width: 0; min-height: 214px; max-height: 290px; overflow: hidden; position: relative; border-radius: 10px; background: #162e24; border: 1px solid #dbe3d5; }
+#gh-cam { width: 100%; height: 100%; position: absolute; inset: 0; display: block; object-fit: contain; opacity: 0; transition: opacity .3s; }
+#gh-cam.gh-loaded { opacity: 1; }
+.gh-camera-unavailable #gh-cam { opacity: .15; }
+.gh-camera-state { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; color: #c4d4bb; font-size: 12px; z-index: 1; text-align: center; }
+.gh-camera-state[hidden] { display: none; }
+.gh-camera-top, .gh-camera-bottom { position: absolute; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; color: #f1f6e9; pointer-events: none; z-index: 2; }
+.gh-camera-top { top: 0; padding: 14px; background: linear-gradient(#13271b83, transparent); }
+.gh-camera-live { display: inline-flex; align-items: center; gap: 6px; background: #173e3099; border: 1px solid #c0dcad40; padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 600; letter-spacing: 1px; }
+.gh-camera-live i { width: 5px; height: 5px; border-radius: 50%; background: #c1e68e; box-shadow: 0 0 0 3px #c1e68e15; }
+.gh-camera-id { font-size: 9px; letter-spacing: 1.4px; opacity: .85; }
+.gh-camera-bottom { bottom: 0; padding: 24px 14px 12px; background: linear-gradient(transparent, #0e241de0); font-size: 10px; }
+.gh-camera-bottom time { color: #d0dfc1; font-size: 10px; letter-spacing: .5px; }
+.gh-side { min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+.gh-section-label { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: #5c7455; font-size: 11px; font-weight: 500; }
+.gh-section-label small { font-size: 9px; color: #94a08a; font-weight: 400; }
+.gh-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.gh-metric { border-radius: 9px; background: #f5f7f0; border: 1px solid #e9ede1; padding: 13px 13px 12px; min-width: 0; }
+.gh-metric-primary { background: #eaf1df; border-color: #dde8cf; }
+.gh-metric-label { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #7b8b6b; white-space: nowrap; }
+.gh-metric-label svg { width: 14px; height: 14px; }
+.gh-metric-primary .gh-metric-label { color: #6b8355; }
+.gh-reading { display: flex; align-items: baseline; gap: 4px; margin-top: 12px; white-space: nowrap; }
+.gh-metric-value { font-size: clamp(24px, 2.65vw, 38px); line-height: 1.15; letter-spacing: -1.3px; color: #375538; font-weight: 550; }
+.gh-metric-primary .gh-metric-value { color: #2c5732; }
+.gh-unit { color: #8c9b7c; font-size: 13px; }
+.gh-metric-note { display: block; margin-top: 9px; color: #8b987c; font-size: 9px; line-height: 1.6; overflow-wrap: anywhere; }
+.gh-status-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 1px; }
+.gh-status-item { display: flex; flex-direction: column; gap: 6px; font-size: 10px; padding: 0 14px; color: #8b967f; border-left: 1px solid #e9ede1; }
+.gh-status-item:first-child { border: 0; padding-left: 0; }
+.gh-status-item:last-child { padding-right: 0; }
+.gh-status-item strong { font-size: 11px; font-weight: 500; display: flex; align-items: center; gap: 5px; }
+.gh-status-item strong:before { content: ""; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #b0ba9f; }
+.gh-status-item .gh-on { color: #5b8050; }
+.gh-status-item .gh-on:before { background: #7da25a; }
+.gh-status-item .gh-off { color: #97a18c; }
+.gh-control-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; border-top: 1px solid #e9ede1; padding-top: 15px; }
+.gh-temperature-input { display: flex; align-items: center; gap: 5px; color: #859276; font-size: 10px; }
+.gh-temperature-input input { width: 59px; min-height: 35px; padding: 6px 4px 6px 9px; border-radius: 7px; border: 1px solid #dfe6d5; background: #fafbf7; color: #42603e; font-size: 12px; }
+.gh-temperature-input > span { padding-right: 3px; color: #8d9c7d; }
+.gh-btn { min-height: 35px; padding: 7px 10px; font-size: 10px; border: 1px solid #dee6d4; color: #6c805b; background: #fff; border-radius: 7px; white-space: nowrap; }
+.gh-btn:hover { background: #eef3e7; border-color: #c7d6b7; color: #315c3a; }
+.gh-btn-primary { background: #315e40; border-color: #315e40; color: #edf5e2; }
+.gh-btn-primary:hover { background: #264d33; border-color: #264d33; color: #fff; }
+.gh-panel-footer { padding: 11px 23px; background: #fafcf6; border-top: 1px solid #eaf0e2; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.gh-host-state { display: flex; align-items: center; gap: 7px; color: #8a9879; font-size: 9px; }
+.gh-host-state svg { width: 13px; height: 13px; color: #84956f; }
+.gh-snapshot-button { display: flex; align-items: center; gap: 5px; color: #6f8659; font-size: 10px; padding: 3px 0 3px 6px; white-space: nowrap; }
+.gh-snapshot-button svg { width: 13px; height: 13px; }
+.gh-snapshot-button:hover { color: #315e40; }
+.gh-feedback { color: #6f805f; background: #f3f7ec; font-size: 11px; padding: 9px 23px; border-top: 1px solid #e8edde; }
+.gh-feedback:empty { display: none; }
+
+/* Larger, more legible controls; unsupported channels stay visually distinct. */
+.controls-card { padding: 18px 21px 20px; margin-bottom: 19px; }
+.controls-heading h2 { font-size: 14px; font-weight: 600; }
+.controls-heading > div > span { color: #95a087; }
+.control-mode > select { font-size: 10px; padding: 6px 23px 6px 9px; border-radius: 6px; background: #f9fbf5; }
+.controls-list { gap: 12px; margin-top: 18px; }
+.control-item { padding: 12px !important; border: 1px solid #e9eee1; background: #fbfcf8; border-radius: 9px; gap: 10px; flex-wrap: wrap; }
+.control-item + .control-item:before { display: none; }
+.control-device-icon { width: 34px; height: 36px; background: #f0f3e8; color: #9da990; }
+.control-device-icon.running { background: #e6efda; color: #72964d; }
+.control-label > strong { font-size: 11px; color: #597049; font-weight: 500; }
+.control-label > small { font-size: 9px; color: #9aa58d; }
+.control-item[data-gh-nohw] { background: #fafbf8; border-style: dashed; }
+.control-item[data-gh-nohw] > small { width: 100%; font-size: 9px; margin-left: 0; padding-left: 0; color: #9aa38f !important; line-height: 1.5; }
+.switch { width: 33px; height: 20px; padding: 2px; border: 0; background: #dfe6d6; }
+.switch > span { width: 15px; height: 15px; }
+.switch.on { background: #82a562; border: 0; }
+.switch.on > span { transform: translateX(14px); }
+.bottom-grid { gap: 19px; grid-template-columns: 1.65fr 1fr; }
+.segment { background: #f1f5e9; border-color: #e7eddd; border-radius: 6px; }
+.segment > button { font-size: 10px; padding: 5px 8px; }
+.segment > button.active { color: #5c7a43; background: white; border-radius: 4px; }
+.chart-legend > button { font-size: 10px; }
+.chart-meta > span { color: #89967b; font-size: 10px; }
+.chart-meta > span > strong { color: #617b4b; font-size: 15px; }
+.chart-footer { background: #fafcf7; font-size: 9px; color: #8c9a7b; border-top-color: #edf0e6; }
+.activity-card .card-heading { padding: 19px 20px 0; }
+.activity-item strong { font-size: 11px; color: #526b40; }
+.activity-item p { font-size: 10px; color: #93a180; }
+.activity-item time { font-size: 10px; color: #90a17a; }
+.activity-foot { background: #fafcf7; font-size: 10px; color: #879a73; }
+.log-mini-tabs > button { font-size: 11px; }
+.text-button { color: #799160; font-size: 10px; }
+.page-footer { font-size: 9px; color: #94a184; padding: 4px 0 22px; }
+.demo-label { color: #78925d; border-color: #e2e9d6; background: #f0f5e6; }
+.toast-message { background: #244d36; color: #f3f7eb; border: 1px solid #61804d; border-radius: 10px; box-shadow: 0 8px 30px #193b2b20; }
+.modal { border-radius: 16px; border: 1px solid #e3e9da; }
+.modal h2 { color: #355635; }
+.full-log-card, .device-table-card { border-radius: 12px; }
+.logs-table th, .device-table-card th { color: #849674; background: #f6f9f0; }
+.logs-table td, .device-table-card td { color: #647c50; border-color: #edf0e5; }
+
+@media (min-width: 1600px) {
+  main { padding-top: 32px; }
+  .gh-flex { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 30px; }
+  .gh-cam-wrap { min-height: 270px; }
+  .gh-metric { padding: 17px; }
+  .gh-metric-value { font-size: 42px; }
+  .gh-metric-label { font-size: 12px; }
+  .gh-metric-note, .gh-host-state { font-size: 10px; }
+  .gh-status-item { font-size: 11px; }
+  .gh-status-item strong { font-size: 12px; }
+  .gh-btn, .gh-temperature-input { font-size: 11px; }
+}
+
+@media (min-width: 701px) and (max-width: 1180px) {
+  .sidebar { width: 180px; padding: 25px 12px 0; }
+  .main-shell { margin-left: 180px; width: calc(100% - 180px); }
+  .brand { gap: 9px; }
+  .brand strong { font-size: 24px; }
+  .brand small { font-size: 6px; letter-spacing: .8px; }
+  .brand-mark { width: 36px; height: 39px; }
+  .farm-select { gap: 6px; padding: 12px 8px; }
+  .farm-select strong { font-size: 11px; }
+  .farm-select small { font-size: 8px; }
+  .nav-list > button { padding: 0 11px; font-size: 12px; }
+  .topbar { padding: 0 24px; }
+  main { padding: 23px 24px 0; }
+  .farm-stats > div { padding: 0 13px; gap: 8px; }
+  .farm-stats .growth-chip { display: none; }
+  .farm-stats strong.number { font-size: 19px; }
+  .stat-icon { width: 30px; height: 34px; }
+  .gh-flex { gap: 19px; padding: 18px; grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr); }
+  .gh-side { gap: 12px; }
+  .gh-metric { padding: 11px 9px; }
+  .gh-metric-label { font-size: 9px; gap: 3px; }
+  .gh-metric-label svg { width: 12px; height: 12px; }
+  .gh-metric-value { font-size: 29px; }
+  .gh-metric-note { font-size: 8px; }
+  .gh-unit { font-size: 11px; }
+  .gh-control-bar { gap: 6px; padding-top: 12px; }
+  .gh-temperature-input { font-size: 9px; }
+  .gh-temperature-input input { width: 52px; }
+  .gh-btn { padding: 6px 8px; font-size: 9px; }
+  .overview-grid { grid-template-columns: 1.15fr 1fr 1fr; gap: 13px; }
+  .card-heading { padding: 17px 14px 0; }
+  .card-heading h2 { font-size: 12px; }
+  .device-caption { margin: 12px 14px 0; font-size: 9px; display: block; }
+  .device-caption > span { display: block; margin-top: 3px; font-size: 8px; }
+  .device-visual { margin: 12px 13px 0; height: 100px; }
+  .device-visual .device-art { height: 102px; }
+  .device-visual-label { font-size: 6px; letter-spacing: 1px; top: 8px; left: 8px; }
+  .env-main-metrics { padding: 22px 15px 13px; gap: 19px; }
+  .metric-value { font-size: 33px; }
+  .metric-name { font-size: 10px; }
+  .metric-range { font-size: 9px; flex-wrap: wrap; gap: 4px; }
+  .metric-range > small { font-size: 8px; margin-left: 0; }
+  .env-secondary { margin: 0 15px; padding: 13px 0; }
+  .pi-stat-row { padding: 18px 14px 0; gap: 5px; }
+  .pi-stat-row strong { font-size: 20px; }
+  .pi-stat-row small { font-size: 8px; }
+  .pi-stat-row em { font-size: 10px; }
+  .resource-bar { margin: 12px 14px; }
+  .device-card-foot { margin: 0 14px; font-size: 8px; }
+  .plc-stats { margin: 20px 14px 18px; gap: 13px; flex-wrap: wrap; }
+  .plc-stats strong { font-size: 22px; }
+  .plc-protocol { font-size: 9px; }
+  .controls-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .control-label > strong { font-size: 12px; }
+  .bottom-grid { grid-template-columns: 1.35fr 1fr; gap: 14px; }
+  .chart-card .card-heading { flex-wrap: wrap; gap: 12px; }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .gh-flex { grid-template-columns: 1fr; }
+  .gh-cam-wrap { min-height: 240px; max-height: 300px; }
+  .gh-metric-value { font-size: 36px; }
+  .gh-side { gap: 16px; }
+  .gh-metric-label { font-size: 11px; }
+  .gh-metric-note { font-size: 9px; }
+  .hero-pills { display: none; }
+  .hero-location { font-size: 8px; }
+  .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .environment-card { grid-column: 1 / -1; }
+  .bottom-grid { grid-template-columns: 1fr; }
+}
+
+/* The installed Pi kiosk has a short 1024 × 600 display. */
+@media (min-width: 901px) and (max-height: 720px) {
+  .sidebar { width: 172px; padding: 19px 11px 0; }
+  .main-shell { margin-left: 172px; width: calc(100% - 172px); }
+  .brand { padding-bottom: 22px; gap: 9px; }
+  .brand strong { font-size: 23px; }
+  .brand small { font-size: 5.5px; letter-spacing: .7px; }
+  .brand-mark { width: 34px; height: 38px; }
+  .workspace-label { font-size: 9px; }
+  .farm-select { padding: 10px 8px; }
+  .farm-select strong { font-size: 10px; }
+  .farm-select small { font-size: 8px; }
+  .nature-card { display: none; }
+  .nav-label { padding-top: 23px; }
+  .nav-list { gap: 5px; }
+  .nav-list > button { min-height: 41px; font-size: 12px; padding: 0 11px; }
+  .user-profile { margin-top: 10px; padding: 13px 4px; }
+  .topbar { height: 43px; padding: 0 21px; }
+  .top-date, .breadcrumb, .breadcrumb > strong { font-size: 10px; }
+  .top-avatar { width: 25px; height: 25px; font-size: 11px; }
+  main { padding: 15px 21px 0; }
+  .page-heading { margin-bottom: 11px; }
+  .eyebrow { font-size: 7px; margin-bottom: 3px; }
+  h1 { font-size: 23px; }
+  .page-heading p { display: none; }
+  .hero-card, .farm-stats { display: none; }
+  .section-toolbar { min-height: 31px; margin-bottom: 10px; }
+  .house-picker select { font-size: 12px; }
+  #gh-panel .gh-panel-heading { padding: 12px 17px; }
+  .gh-panel-title h2 { font-size: 13px; }
+  .gh-panel-subtitle { font-size: 8px; }
+  .gh-flex { grid-template-columns: minmax(0, .86fr) minmax(0, 1.3fr); gap: 17px; padding: 14px 17px; }
+  .gh-cam-wrap { min-height: 205px; max-height: 230px; }
+  .gh-side { gap: 11px; }
+  .gh-metrics { gap: 7px; }
+  .gh-metric { padding: 10px 9px; }
+  .gh-metric-value { font-size: 29px; }
+  .gh-reading { margin-top: 9px; }
+  .gh-metric-note { margin-top: 7px; font-size: 8px; }
+  .gh-status-item { font-size: 9px; gap: 4px; }
+  .gh-status-item strong { font-size: 10px; }
+  .gh-control-bar { padding-top: 10px; gap: 5px; }
+  .gh-temperature-input { font-size: 9px; }
+  .gh-temperature-input input { width: 48px; min-height: 32px; }
+  .gh-btn { min-height: 32px; padding: 5px 7px; font-size: 9px; }
+  .gh-panel-footer { padding: 8px 17px; }
+  .gh-host-state, .gh-snapshot-button { font-size: 9px; }
+  .gh-feedback { padding: 6px 17px; font-size: 10px; }
+  .overview-grid { gap: 13px; margin-bottom: 13px; }
+  .controls-card { padding: 14px 17px; margin-bottom: 13px; }
+}
+
+@media (max-width: 700px) {
+  .sidebar { width: 238px; padding: 28px 20px 0; }
+  .main-shell { width: 100%; margin-left: 0; }
+  .sidebar.open { box-shadow: 20px 0 80px #0f291f30; }
+  .sidebar-scrim { backdrop-filter: blur(3px); background: #0c291b40; }
+  .brand { padding-bottom: 29px; }
+  .brand small { font-size: 7px; }
+  .topbar { height: 56px; padding: 0 19px; }
+  .mobile-menu { display: inline-flex; }
+  .breadcrumb { gap: 7px; font-size: 10px; }
+  .breadcrumb > strong { font-size: 11px; }
+  .topbar-right { gap: 10px; }
+  .top-date { font-size: 10px; }
+  main { padding: 23px 18px 0; }
+  .page-heading { margin-bottom: 22px; gap: 12px; }
+  .eyebrow { font-size: 7px; letter-spacing: 1.3px; }
+  h1 { font-size: 27px; }
+  .page-heading p { font-size: 10px; letter-spacing: .1px; line-height: 1.9; max-width: 225px; }
+  .heading-actions { gap: 8px; }
+  .export-button { font-size: 10px; padding: 8px 9px; min-height: 35px; white-space: nowrap; }
+  .hero-card { height: 163px; border-radius: 12px; margin-bottom: 22px; }
+  .hero-copy { left: 21px; top: 22px; }
+  .hero-copy h2 { font-size: 23px; letter-spacing: 1px; line-height: 1.45; margin-top: 13px; }
+  .hero-copy h2 br { display: block; }
+  .hero-copy p { font-size: 8px; margin-top: 12px; max-width: 265px; letter-spacing: .3px; }
+  .hero-card:before { width: 180px; height: 180px; right: -54px; top: -34px; opacity: .7; }
+  .hero-card:after { width: 115px; height: 115px; right: 35px; bottom: -80px; }
+  .hero-pills, .hero-location { display: none; }
+  .section-toolbar { gap: 6px; margin-bottom: 14px; }
+  .house-picker { gap: 7px; }
+  .house-picker select { font-size: 12px; padding-right: 0; }
+  .house-picker > svg { width: 17px; }
+  .house-picker > .badge { font-size: 8px; padding: 4px 5px; gap: 3px; }
+  .toolbar-right { gap: 4px; }
+  .update-label { display: none; }
+  .toolbar-right .icon-button { width: 30px; height: 31px; }
+  .farm-stats { display: grid; grid-template-columns: repeat(2, 1fr); padding: 0; gap: 0; margin-bottom: 17px; }
+  .farm-stats > div { padding: 17px 14px; gap: 11px; }
+  .farm-stats > div + div:before { display: none; }
+  .farm-stats > div:nth-child(even) { border-left: 1px solid #e9eee1; }
+  .farm-stats > div:nth-child(n+3) { border-top: 1px solid #e9eee1; }
+  .farm-stats .growth-chip { display: none; }
+  .farm-stats strong.number { font-size: 22px; }
+  .farm-stats strong:not(.number) { font-size: 12px; }
+  .farm-stats small { font-size: 9px; margin-bottom: 4px; }
+  .stat-icon { width: 32px; height: 35px; }
+  .stat-icon svg { width: 17px; }
+  .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-bottom: 17px; }
+  .environment-card { grid-column: 1 / -1; display: block; }
+  #gh-panel .gh-panel-heading { padding: 15px 16px; }
+  .gh-panel-title { gap: 9px; }
+  .gh-panel-title h2 { font-size: 14px; }
+  .gh-panel-subtitle { font-size: 7px; letter-spacing: 1.2px; }
+  .gh-connection { font-size: 9px; padding: 4px 6px; }
+  .gh-flex { grid-template-columns: 1fr; gap: 18px; padding: 15px; }
+  .gh-cam-wrap { aspect-ratio: 4 / 3; min-height: 0; max-height: none; }
+  .gh-side { gap: 16px; }
+  .gh-section-label { font-size: 11px; }
+  .gh-section-label small { font-size: 9px; }
+  .gh-metrics { gap: 8px; }
+  .gh-metric { padding: 12px 9px; }
+  .gh-metric-label { font-size: 10px; gap: 4px; }
+  .gh-metric-label svg { width: 12px; height: 12px; }
+  .gh-metric-value { font-size: clamp(25px, 7.8vw, 38px); letter-spacing: -1px; }
+  .gh-reading { margin-top: 11px; gap: 3px; }
+  .gh-unit { font-size: 11px; }
+  .gh-metric-note { font-size: 8px; margin-top: 8px; }
+  .gh-status-item { font-size: 10px; padding: 0 13px; }
+  .gh-status-item strong { font-size: 11px; }
+  .gh-control-bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-top: 15px; }
+  .gh-temperature-input { grid-column: 1 / -1; font-size: 11px; gap: 9px; margin-bottom: 2px; }
+  .gh-temperature-input input { width: 85px; min-height: 38px; margin-left: auto; font-size: 14px; }
+  .gh-btn { min-height: 39px; padding: 8px 5px; font-size: 11px; }
+  .gh-panel-footer { padding: 12px 15px; align-items: flex-start; gap: 8px; }
+  .gh-host-state { line-height: 1.8; font-size: 8px; gap: 5px; }
+  .gh-host-state svg { margin-top: 2px; flex-shrink: 0; }
+  .gh-snapshot-button { font-size: 9px; padding-top: 1px; }
+  .gh-feedback { padding: 10px 15px; font-size: 10px; }
+  .card-heading { padding: 18px 16px 0; }
+  .card-heading h2 { font-size: 13px; }
+  .env-main-metrics { padding: 24px 20px 17px; gap: 28px; }
+  .metric-name { font-size: 11px; }
+  .metric-value { font-size: 40px; margin-top: 12px; }
+  .metric-range { font-size: 9px; }
+  .metric-range > small { font-size: 8px; }
+  .env-secondary { display: flex; flex-direction: row; margin: 0 20px; padding: 16px 0; }
+  .env-secondary > div { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .env-secondary > div + div { border-top: 0; border-left: 1px solid #e8edde; padding: 0 0 0 20px; }
+  .env-secondary > div > span { font-size: 10px; }
+  .env-secondary strong { font-size: 23px; }
+  .device-card .card-heading { padding: 17px 13px 0; }
+  .device-card .card-heading h2 { font-size: 12px; gap: 5px; }
+  .device-card .card-heading h2 > span > svg { width: 15px; }
+  .device-card .badge { font-size: 8px; padding: 3px 5px; gap: 3px; }
+  .device-caption, .devices-layout .device-caption { display: block; margin: 11px 13px 0; font-size: 9px; }
+  .device-caption > span, .devices-layout .device-caption > span { display: block; margin-top: 3px; font-size: 8px; }
+  .device-visual, .devices-layout .device-visual { margin: 12px 12px 0; height: 104px; }
+  .device-visual .device-art, .devices-layout .device-visual .device-art { height: 104px; width: 110%; left: -5%; }
+  .device-visual-label { font-size: 5px; letter-spacing: .6px; top: 8px; left: 8px; }
+  .device-floating-badge { font-size: 7px; bottom: 6px; right: 6px; padding: 2px 4px; }
+  .pi-stat-row, .devices-layout .pi-stat-row { padding: 17px 13px 0; gap: 5px; }
+  .pi-stat-row small, .devices-layout .pi-stat-row small { font-size: 8px; margin-bottom: 6px; }
+  .pi-stat-row strong, .devices-layout .pi-stat-row strong { font-size: 20px; }
+  .pi-stat-row em { font-size: 9px; }
+  .resource-bar { height: 3px; margin: 11px 13px 12px; }
+  .device-card-foot, .devices-layout .device-card-foot { padding: 10px 0; margin: 0 13px; font-size: 8px; }
+  .plc-stats, .devices-layout .plc-stats { margin: 19px 13px 14px; gap: 12px; flex-wrap: wrap; }
+  .plc-stats small, .devices-layout .plc-stats small { font-size: 8px; }
+  .plc-stats strong, .devices-layout .plc-stats strong { font-size: 22px; }
+  .plc-protocol, .plc-protocol > small { font-size: 8px; }
+  .controls-card { padding: 17px 15px; }
+  .controls-heading h2 { font-size: 13px; }
+  .controls-heading > div:first-child > span { display: none; }
+  .controls-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .control-item { gap: 7px; padding: 10px !important; }
+  .control-device-icon { width: 28px; height: 31px; }
+  .control-device-icon > svg { width: 17px; }
+  .control-label > strong { font-size: 10px; }
+  .control-label > small { font-size: 8px; }
+  .control-item[data-gh-nohw] > small { font-size: 8px; }
+  .control-item .switch { width: 29px; height: 19px; padding: 2px; }
+  .control-item .switch > span { width: 14px; height: 14px; }
+  .control-item .switch.on > span { transform: translateX(11px); }
+  .bottom-grid { grid-template-columns: 1fr; gap: 17px; }
+  .chart-card .card-heading { padding: 18px 16px 0; flex-wrap: wrap; gap: 12px; }
+  .segment > button { font-size: 9px; padding: 5px 7px; }
+  .activity-item strong { font-size: 11px; }
+  .activity-item p { font-size: 9px; }
+  .page-footer { font-size: 8px; padding-bottom: 18px; }
+  .toast-message { left: 50%; font-size: 11px; }
+}
+
+@media (max-width: 360px) {
+  main { padding-right: 13px; padding-left: 13px; }
+  .gh-panel-subtitle { display: none; }
+  .gh-metric-label { font-size: 9px; }
+  .gh-metric-value { font-size: 25px; }
+  .gh-unit { font-size: 10px; }
+  .control-device-icon { display: none; }
+  .gh-host-state { max-width: 160px; }
+  .device-card .card-heading { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

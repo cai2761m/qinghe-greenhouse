@@ -1,5 +1,7 @@
 # 青禾 · 数字大棚
 
+树莓派实机 UI 的主题、监控面板和部署说明见 [deploy/pi-ui/README.md](deploy/pi-ui/README.md)。实机访问地址：<http://192.168.1.219:8090/>。
+
 使用 Vue 3、TypeScript 和 Vite 构建的数字大棚管理界面。根据草图保留实时环境报告、树莓派 5B、PLC 控制器及运行日志布局。
 
 ## 本地运行
