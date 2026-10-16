@@ -74,7 +74,7 @@ const navItems = [{key: 'overview', label: '大棚总览', icon: LayoutDashboard
   label: '环境监测',
   icon: Activity
 }, {key: 'devices', label: '设备管理', icon: Cpu}, {key: 'logs', label: '运行日志', icon: BookOpen}] as const
-const houses = [{id: '01', name: '01 号智慧大棚', crop: '樱桃番茄', area: '1,280', plants: '1,840', day: 42}, {
+const houses = [{id: '01', name: '01 号智慧大棚', crop: '樱桃番茄', area: '0.4', plants: '0', day: 42}, {
   id: '02',
   name: '02 号育苗大棚',
   crop: '奶油生菜',

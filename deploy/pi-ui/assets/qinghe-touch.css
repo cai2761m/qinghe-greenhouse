@@ -1,0 +1,139 @@
+/* Shared touch controls: load after the base UI and refined theme. */
+#app button,
+#app [role="button"],
+#app a[href],
+#app select,
+#app input:not([type="hidden"]) {
+  min-width: 48px;
+  min-height: 48px;
+  touch-action: manipulation;
+}
+#app button, #app select { font-size: 14px; line-height: 1.4; }
+#app input { font-size: 16px; }
+#app button { flex-shrink: 0; }
+#app button svg { width: 20px; height: 20px; }
+#app .button { padding: 12px 18px; gap: 9px; border-radius: 10px; }
+#app .icon-button, #app .text-icon, #app .device-card-foot button {
+  width: 48px; height: 48px; padding: 10px; border-radius: 10px;
+}
+#app .text-icon { display: inline-flex; align-items: center; justify-content: center; }
+#app .text-button, #app .card-foot > button {
+  padding: 10px 12px; gap: 7px; border-radius: 8px;
+}
+#app .text-button:hover, #app .text-icon:hover, #app .device-card-foot button:hover,
+#app .card-foot > button:hover { background: #edf3e5; }
+#app .brand { min-height: 56px; }
+#app .nav-list > button { min-height: 56px; padding: 12px 15px; font-size: 15px; gap: 12px; }
+#app .bottom-nav { min-height: 50px; padding: 10px; gap: 12px; }
+#app .topbar { height: 68px; min-height: 68px; }
+#app .topbar-right { gap: 12px; }
+#app .notification-button > i { top: 10px; right: 11px; }
+#app .notification-popover { top: 55px; }
+#app .heading-actions { flex-wrap: wrap; gap: 12px; }
+#app .section-toolbar { flex-wrap: wrap; gap: 10px; }
+#app .toolbar-right { margin-left: auto; gap: 8px; }
+#app .house-picker { flex-wrap: wrap; gap: 8px; }
+#app .house-picker select { padding: 10px 8px; }
+#app .control-mode > select { min-width: 115px; padding: 12px 27px 12px 12px; border-radius: 8px; }
+#app .control-mode > svg { right: 8px; width: 15px; height: 15px; }
+#app .controls-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+#app .control-item { padding: 14px !important; gap: 10px; }
+#app .control-label > strong { font-size: 14px; }
+#app .control-label > small { font-size: 11px; }
+#app .switch { width: 72px; height: 48px; min-width: 72px; padding: 6px; border: 0; border-radius: 28px; }
+#app .switch > span { width: 36px; height: 36px; flex-shrink: 0; transform: translateX(0); }
+#app .switch.on > span { transform: translateX(24px); }
+#app .gh-control-bar { gap: 8px; }
+#app .gh-temperature-input { font-size: 13px; gap: 7px; }
+#app .gh-temperature-input input { width: 72px; min-height: 48px; padding: 10px; font-size: 16px; border-radius: 8px; }
+#app .gh-btn { padding: 11px 13px; font-size: 14px; border-radius: 8px; }
+#app .gh-panel-footer { flex-wrap: wrap; align-items: center; gap: 10px; }
+#app .gh-snapshot-button { padding: 10px 13px; gap: 7px; border: 1px solid #dce5d1; border-radius: 8px; background: white; }
+#app .gh-snapshot-button:hover { background: #edf3e5; }
+#app .card-heading, #app .controls-heading { flex-wrap: wrap; gap: 12px; }
+#app .card-foot, #app .device-card-foot { align-items: center; }
+#app .segment { gap: 4px; padding: 4px; border-radius: 10px; flex-wrap: wrap; }
+#app .segment > button { padding: 10px 12px; font-size: 14px; border-radius: 7px; }
+#app .chart-meta { flex-wrap: wrap; gap: 12px; }
+#app .chart-legend { flex-wrap: wrap; gap: 8px; }
+#app .chart-legend > button { padding: 10px 9px; gap: 7px; font-size: 14px; }
+#app .log-mini-tabs { gap: 9px; flex-wrap: wrap; }
+#app .log-mini-tabs > button { padding: 10px 12px; font-size: 14px; }
+#app .log-live-dot { align-self: center; margin-top: 0; }
+#app .full-log-toolbar { flex-wrap: wrap; gap: 16px; }
+#app .log-filter-tabs { flex-wrap: wrap; gap: 8px; }
+#app .log-filter-tabs > button { padding: 10px 12px; font-size: 14px; }
+#app .log-filters { flex-wrap: wrap; gap: 10px; }
+#app .search-input { min-height: 48px; padding: 0 12px; gap: 8px; }
+#app .search-input input { min-height: 48px; width: 160px; }
+#app .date-select { padding: 10px 12px; }
+#app .pagination { flex-wrap: wrap; gap: 12px; }
+#app .pagination > div { gap: 12px; }
+#app .modal-close { top: 12px; right: 12px; }
+#app .modal { padding-top: 35px; }
+#app .modal-actions { flex-wrap: wrap; gap: 12px; }
+#app .modal-actions .button { min-width: 100px; }
+#app .range-inputs input { min-height: 48px; font-size: 22px; }
+
+@media (min-width: 701px) and (max-width: 1180px) {
+  #app .sidebar { width: 190px; }
+  #app .main-shell { margin-left: 190px; width: calc(100% - 190px); }
+  #app .nav-list > button { padding: 12px; font-size: 14px; gap: 9px; }
+  #app .gh-control-bar { flex-wrap: wrap; }
+  #app .gh-btn { padding: 11px 10px; }
+}
+
+@media (min-width: 901px) and (max-height: 720px) {
+  #app .sidebar { width: 180px; }
+  #app .main-shell { margin-left: 180px; width: calc(100% - 180px); }
+  #app .sidebar .workspace-label, #app .sidebar .farm-select, #app .nature-card { display: none; }
+  #app .brand { padding-bottom: 17px; }
+  #app .nav-label { padding-top: 13px; padding-bottom: 12px; }
+  #app .nav-list > button { min-height: 52px; font-size: 14px; }
+  #app .bottom-nav { min-height: 48px; }
+  #app .topbar { height: 56px; min-height: 56px; }
+  #app .page-heading { margin-bottom: 8px; }
+  #app .section-toolbar { margin-bottom: 10px; }
+  #app .gh-flex { grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: 17px; }
+  #app .gh-cam-wrap { max-height: none; }
+  #app .gh-side { gap: 12px; }
+  #app .gh-control-bar { gap: 7px; padding-top: 12px; }
+  #app .gh-temperature-input { font-size: 12px; gap: 5px; }
+  #app .gh-temperature-input input { width: 64px; }
+  #app .gh-btn { padding: 11px 10px; font-size: 14px; }
+  #app .gh-panel-footer { padding-top: 8px; padding-bottom: 8px; }
+}
+
+@media (max-width: 700px) {
+  #app .sidebar { width: 252px; }
+  #app .main-shell { width: 100%; margin-left: 0; }
+  #app .topbar { padding: 0 13px; }
+  #app .topbar-right { gap: 4px; }
+  #app .breadcrumb { gap: 5px; }
+  #app .top-date { display: none; }
+  #app .page-heading { align-items: center; flex-wrap: wrap; gap: 14px; }
+  #app .heading-actions { align-self: center; padding-bottom: 0; }
+  #app .export-button { font-size: 14px; padding: 11px 13px; }
+  #app .house-picker select { font-size: 14px; }
+  #app .house-picker > .badge { font-size: 10px; }
+  #app .gh-control-bar { gap: 9px; }
+  #app .gh-temperature-input { font-size: 14px; }
+  #app .gh-temperature-input input { width: 88px; }
+  #app .gh-btn { padding: 11px 8px; font-size: 14px; }
+  #app .gh-snapshot-button { margin-left: auto; }
+  #app .controls-heading { gap: 14px; }
+  #app .control-device-icon { width: 36px; height: 38px; display: grid; }
+  #app .control-item[data-gh-nohw] > small { font-size: 10px; }
+  #app .device-card .card-heading { gap: 8px; }
+  #app .segment { gap: 3px; }
+  #app .segment > button { padding: 10px; font-size: 13px; }
+  #app .chart-card .card-heading { gap: 13px; }
+  #app .full-log-toolbar { padding: 18px 13px; }
+  #app .log-filter-tabs { gap: 4px; }
+  #app .log-filter-tabs > button { padding: 10px; }
+  #app .log-filters { width: 100%; }
+  #app .search-input { flex: 1; min-width: 0; }
+  #app .search-input input { width: 100%; min-width: 0; }
+  #app .date-select { max-width: 125px; }
+  #app .modal { max-height: 92dvh; padding-right: 20px; padding-left: 20px; }
+}
